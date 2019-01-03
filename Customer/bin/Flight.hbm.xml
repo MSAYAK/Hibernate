@@ -4,19 +4,23 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "Flight" table = "Flight">
+      <class name = "com.lti.aeroplane.Flight" table = "Flight">
       
       <meta attribute = "class-description">
          This class contains the flight detail. 
       </meta>
       
-      <id name = "id" type = "int" column = "id">
+      <id name = "flightId" type = "int" column = "Flight_id">
          <generator class="native"/>
       </id>
       
-      <property name = "from" column = "from" type = "string"/>
-      <property name = "to" column = "to" type = "string"/>
+      <property name = "fromSector" column = "fromSector" type = "string"/>
+      <property name = "toSector" column = "toSector" type = "string"/>
       <property name = "capacity" column = "capacity" type = "int"/>
-      
+      <list name="Airlinelist" cascade="all">
+      <key column="flightId"></key>
+      <index column="idx"></index>
+      <one-to-many class="com.lti.aeroplane.Airline"></one-to-many>
+      </list>
    </class>
 </hibernate-mapping>
