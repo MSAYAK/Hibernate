@@ -1,0 +1,4 @@
+com\lti\model\PersonData.class
+com\lti\model\Person.class
+com\lti\servlets\addPerson.class
+FirstHibernate\util\HibernateUtil.class
