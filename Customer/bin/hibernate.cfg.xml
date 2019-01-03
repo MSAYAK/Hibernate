@@ -19,7 +19,7 @@
         <property name="hbm2ddl.auto">
             create
         </property>  
-        <!-- <mapping class="com.lti.model.Customer"/> -->
+     <mapping class="com.lti.model.Customer"/>
         <!-- <mapping class="com.lti.model.School"/>
         <mapping class="com.lti.model.SchoolDetails"/> -->
         <mapping class="com.lti.model.Project"/>

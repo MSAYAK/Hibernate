@@ -2,11 +2,13 @@ package com.customer.app;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.criterion.Restrictions;
 
 import com.lti.model.Customer;
 
@@ -48,7 +50,7 @@ public static void main(String args[])
 	Transaction tx1 =session2.beginTransaction();
 	Customer c=(Customer)session2.load(Customer.class, c3.getCustid());
 	c.setCustadd("KALVA");
-	c.setCreditscore(200);
+	c.setCreditscore(2000);
 	c.setRewardpoints(90);
 	session2.saveOrUpdate(c);
 	query=session2.createQuery("from Customer");
@@ -59,6 +61,12 @@ public static void main(String args[])
 	}
 	System.out.println("Closing Session..");
 	tx1.commit();
-	session2.close(); 
+	Criteria cuscriteria=session2.createCriteria(Customer.class);
+	cuscriteria.add(Restrictions.gt("creditscore", 1000));
+	custlist=cuscriteria.list();
+	System.out.println("Customers with credit score more than 1000 are...");
+	for (Customer c11:custlist)
+		System.out.println(c11);
+	session2.close();
 }
 }

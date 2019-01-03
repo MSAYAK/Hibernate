@@ -25,8 +25,8 @@ private int creditscore;
 private int rewardpoints;
 
 @Id
-@GeneratedValue(generator="test_seq", strategy=GenerationType.SEQUENCE)
-@SequenceGenerator(name="test_seq",sequenceName="test_seq")
+@GeneratedValue(generator="test_sql", strategy=GenerationType.SEQUENCE)
+@SequenceGenerator(name="test_sql",sequenceName="test_sql")
 public int getCustid() {
 	return custid;
 }

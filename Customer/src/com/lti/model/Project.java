@@ -11,7 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy=InheritanceType.JOINED)
 
 public class Project {
 private int project_id;
@@ -28,8 +28,8 @@ public Project(String title, Date startDate) {
 	StartDate = startDate;
 }
 @Id
-@GeneratedValue(generator="test_seq", strategy=GenerationType.SEQUENCE)
-@SequenceGenerator(name="test_seq",sequenceName="test_seq")
+@GeneratedValue(generator="seq_test", strategy=GenerationType.SEQUENCE)
+@SequenceGenerator(name="seq_test",sequenceName="seq_test")
 public int getProject_id() {
 	return project_id;
 }
