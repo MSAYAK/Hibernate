@@ -6,6 +6,6 @@ public interface IBidDao {
 public void addBid(Bidders bid);
 public void  deleteBid(int m);
 public void updateBid(Bidders bid,int b_id);
-public void  ListById();
+public void  ListById(int id);
 public void ListAllBids();
 }

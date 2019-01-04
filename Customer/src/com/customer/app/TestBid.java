@@ -42,10 +42,11 @@ public static void main(String args[])
 					addDetails();
 					biddao.updateBid(bid,b_id);
 					break;
-	case 4 : addDetails();
-					biddao.ListById();
+	case 4 : System.out.println("Enter Bid Id to display");
+					int listbid=sc1.nextInt();
+					biddao.ListById(listbid);
 					break;
-	case 5 : addDetails();
+	case 5 : 
 					biddao.ListAllBids();
 					break;		
 	case 6: System.exit(0);		

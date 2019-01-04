@@ -1,5 +1,6 @@
 package com.customer.app;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -41,17 +42,19 @@ public class BidDaoImpl implements IBidDao{
 	{
 		Session session = factory.openSession();
 		Transaction tx =session.beginTransaction();
-		Bidders b1= (Bidders) session.load(Bidders.class, b_id);
+		Bidders b2= (Bidders) session.load(Bidders.class, b_id);
 		bid.setBidId(b_id);
-		b1=bid;
-		session.saveOrUpdate(b1);
+		b2=bid;
+		session.saveOrUpdate(b2);
 		tx.commit();
 		session.close();
 	}
-	public void  ListById()
+	public void  ListById(int id)
 	{
 		Session session = factory.openSession();
 		Transaction tx =session.beginTransaction();
+		List<Bidders> bidl= new ArrayList<Bidders>();
+		Bidders b3=new Bidders();
 		
 		tx.commit();
 		session.close();
