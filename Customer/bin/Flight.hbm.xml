@@ -10,7 +10,7 @@
          This class contains the flight detail. 
       </meta>
       
-      <id name = "flightId" type = "int" column = "Flight_id">
+      <id name = "flightId" type = "int" column = "flightId">
          <generator class="native"/>
       </id>
       

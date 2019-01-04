@@ -21,12 +21,13 @@
         </property>  
 <mapping resource="Flight.hbm.xml"/>
 <mapping resource="Airline.hbm.xml"/>
-        <!-- <mapping class="com.lti.model.School"/>
+        <mapping class="com.lti.model.School"/>
            <mapping class="com.lti.model.Customer"/>
         <mapping class="com.lti.model.SchoolDetails"/> 
         <mapping class="com.lti.model.Project"/>
         <mapping class="com.lti.model.Module"/>
-        <mapping class="com.lti.model.Task"/>-->
+        <mapping class="com.lti.model.Task"/>
+        <mapping class="com.lti.model.Bidders"/>
  </session-factory>  
   
 </hibernate-configuration>  

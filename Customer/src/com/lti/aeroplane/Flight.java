@@ -8,6 +8,7 @@ private String fromSector;
 private String toSector;
 private int capacity;
 private List<Airline>Airlinelist;
+
 public List<Airline> getAirlinelist() {
 	return Airlinelist;
 }
