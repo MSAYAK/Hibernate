@@ -3,10 +3,12 @@ package com.customer.app;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import com.lti.model.Bidders;
 
@@ -55,7 +57,12 @@ public class BidDaoImpl implements IBidDao{
 		Transaction tx =session.beginTransaction();
 		List<Bidders> bidl= new ArrayList<Bidders>();
 		Bidders b3=new Bidders();
-		
+		Criteria bidcriteria =session.createCriteria(Bidders.class);
+		bidcriteria.add(Restrictions.eq("BidId", id));
+		bidl=bidcriteria.list();
+		for(Bidders b4:bidl)
+			b3= b4;
+		System.out.println(b3);
 		tx.commit();
 		session.close();
 	}

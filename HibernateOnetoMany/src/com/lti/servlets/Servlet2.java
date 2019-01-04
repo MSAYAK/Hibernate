@@ -78,7 +78,6 @@ public class Servlet2 extends HttpServlet {
 		//response.getWriter().println(" Hellooo");
 		SQLQuery query=session.createSQLQuery("select r.readerid,email,fname,subtitle from Reader r,Subscription s,Reader_Sub rs"
 				+ " where r.readerid=rs.ReaderId and s.subId=rs.SubscriptionId");
-		
 		List rlist=query.list();
 		request.setAttribute("readerlist", rlist);
 		request.getRequestDispatcher("Data2.jsp").forward(request, response);
