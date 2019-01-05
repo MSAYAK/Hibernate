@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- <beans xmlns = "http://www.springframework.org/schema/beans" -->
+<!--    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" -->
+<!--    xsi:schemaLocation = "http://www.springframework.org/schema/beans -->
+<!--    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"> -->
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+   <context:annotation-config/>
+   <context:component-scan base-package="com.test.model"/>
+  <bean id="sessionFactory" class="hibernateUtil.HibernateUtil" factory-method="getSessionFactory"/>
+<bean id="address" class ="com.test.model.Address">
+<property name= "streetname" value="Mgm Road "/>
+<property name ="city" value ="Mumbai"/>
+<property name ="pincode" value="400011"/>
+</bean>
+
+<bean id="numberGenerator"
+class="com.test.model.NumberGenerator"/>
+<bean id="randomNumber" factory-bean="numberGenerator" factory-method="getNumber"/>
+
+
+
+<bean id="department" class ="com.test.model.Department">
+<property name= "deptid" value=" 10"/>
+<property name ="deptname" value =" Admin"/>
+</bean>
+<bean id="employee" class ="com.test.model.Employee" scope="singleton" autowire="byType">
+<property name= "id" value="100 "/>
+<property name= "name" value="Sayak"/>
+<!-- <property name ="address"  ref="address"/> -->
+<!-- <property name ="dept"  ref="department"/> -->
+</bean>
+</beans>
