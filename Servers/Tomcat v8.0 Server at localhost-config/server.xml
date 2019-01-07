@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="com.amazon.portal" path="/com.amazon.portal" reloadable="true" source="org.eclipse.jst.jee.server:com.amazon.portal"/><Context docBase="SessionManagement" path="/SessionManagement" reloadable="true" source="org.eclipse.jst.jee.server:SessionManagement"/><Context docBase="SimpleWeb" path="/SimpleWeb" reloadable="true" source="org.eclipse.jst.jee.server:SimpleWeb"/><Context docBase="webapp" path="/webapp" reloadable="true" source="org.eclipse.jst.j2ee.server:webapp"/><Context docBase="First" path="/First" reloadable="true" source="org.eclipse.jst.jee.server:First"/><Context docBase="ListenerApp" path="/ListenerApp" reloadable="true" source="org.eclipse.jst.jee.server:ListenerApp"/><Context docBase="FirstHibernate" path="/FirstHibernate" reloadable="true" source="org.eclipse.jst.j2ee.server:FirstHibernate"/><Context docBase="HibernateOnetoMany" path="/HibernateOnetoMany" reloadable="true" source="org.eclipse.jst.jee.server:HibernateOnetoMany"/><Context docBase="BookHibernate" path="/BookHibernate" reloadable="true" source="org.eclipse.jst.jee.server:BookHibernate"/></Host>
+      <Context docBase="SpringMvc" path="/SpringMvc" reloadable="true" source="org.eclipse.jst.jee.server:SpringMvc"/></Host>
     </Engine>
   </Service>
 </Server>
