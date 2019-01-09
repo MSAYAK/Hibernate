@@ -8,5 +8,7 @@
 </head>
 <body>
 <a href="persons">Go to person</a>
+
+<a href="employee">Go to Employee</a>
 </body>
 </html>

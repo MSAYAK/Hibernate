@@ -30,6 +30,8 @@
 			<!-- Map all the annotated class with @Entity -->
 			<list>
 				<value>com.lnt.mvc.model.Person</value>
+				<value>com.lnt.mvc.model.Department</value>
+				<value>com.lnt.mvc.model.EmployeeDetails</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -51,7 +53,7 @@
 		class="com.lnt.mvc.service.PersonServiceImpl">
 		<property name="personDao" ref="personDao"></property>
 	</bean>
-
+	
 	<!-- Enables springframework Hibernate Transactions -->
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">

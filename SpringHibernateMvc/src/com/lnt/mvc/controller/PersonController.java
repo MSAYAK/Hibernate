@@ -20,7 +20,7 @@ import com.lnt.mvc.exception.CustomException;
 import com.lnt.mvc.model.Person;
 import com.lnt.mvc.service.IPersonService;
 
-@Controller
+
 public class PersonController {
 	private IPersonService personService;
 	
